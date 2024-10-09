@@ -177,6 +177,11 @@ img {
     border: 1px solid var(--color-text-black);
 }
 
+.toggle-reset {
+    text-decoration: underline;
+    color: var(--color-bg-bright-blue);
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -272,11 +277,6 @@ main {
 .enterprise > div > div:first-child {
     border-bottom: 1px solid var(--color-light-grey);
 }
-/* ad acquista ora che è lultima ancora della singola option gli rimetto piu o meno le impostazioni di default */
-.business-options > div a:last-child {
-    text-decoration: underline;
-    color: var(--color-bg-bright-blue);
-}
 
 .business-options .line-spacing {
     border: 1px solid var(--color-light-grey);
@@ -312,6 +312,11 @@ main {
 /* figli di card container */
 .card-container > div {
     max-width: calc((100% - (2 * var(--gap-lg))) / 3);
+}
+
+/* partners */
+#partners > div:first-child {
+    padding-block: 100px;
 }
 
 
