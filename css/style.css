@@ -56,7 +56,7 @@ html {
     --p-30: 30px;
     /* text dims */
     --text-xl: 4rem;
-    --text-lg: 2rem;
+    --text-lg: 1.8rem;
 }
 
 /* debug */
@@ -76,6 +76,10 @@ html {
 
 .flex-col {
     flex-direction: column;
+}
+
+.flex-row-reverse{
+    flex-direction: row-reverse;
 }
 
 .flex-center {
@@ -158,8 +162,12 @@ html {
 .bg-yellow {
     background-color: var(--color-bg-yellow);
 }
+/* borders */
 .border-thin-green {
     border: 10px solid var(--color-bg-thin-green);
+}
+.no-border {
+    border: none !important;
 }
 /* text-colors */
 .text-grey {
@@ -167,6 +175,9 @@ html {
 }
 .text-bright-blue {
     color: var(--color-bg-bright-blue);
+}
+.text-dark-red {
+    color: var(--color-text-dark-red);
 }
 
 /* text dimensions */
@@ -382,6 +393,14 @@ main {
     width: 50%;
 }
 
+/* call-to-action */
+#call-to-action {
+    padding-block: 100px;
+}
+
+.cta > * {
+    width: calc(100%  / 2);
+}
 
 /* footer */
 footer {
