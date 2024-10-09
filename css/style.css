@@ -111,6 +111,7 @@ html {
 .gap-sm {
     gap: var(--gap-sm);
 }
+
 .gap-md {
     gap: var(--gap-md);
 }
@@ -143,9 +144,11 @@ html {
 .bg-transparent {
     background: transparent;
 }
+
 .bg-black {
     background-color: var(--color-bg-black);
 }
+
 .bg-white {
     background-color: var(--color-bg-white);
 }
@@ -199,9 +202,11 @@ html {
 .text-white {
     color: var(--color-text-white);
 }
+
 .text-grey {
     color: var(--color-grey);
 }
+
 .text-light-grey {
     color: var(--color-light-grey);
 }
@@ -325,10 +330,12 @@ main {}
 }
 
 .jumbo-left {
+    min-width: 200px;
     width: 30%;
 }
 
 .jumbo-right {
+    min-width: 300px;
     width: 70%;
 }
 
@@ -338,7 +345,7 @@ main {}
     padding-top: 100px;
 }
 
-/* puramente decorativo, simulo una checkbox, non uso border altrimenti visivamente vado oltre 1rem di dimensioni */
+/* puramente decorativo, simulo una checkbox, non uso border ma box shadow inset altrimenti visivamente vado oltre 1rem di dimensioni */
 .business-plan .invoice>span::before {
     content: "";
     display: inline-block;
@@ -383,6 +390,7 @@ main {}
 }
 
 .find-partner-image {
+    min-width: 250px;
     width: calc(60% - 15px);
 }
 
@@ -397,6 +405,7 @@ main {}
 
 /* figli di card container */
 .card-container>div {
+    min-width: 250px;
     max-width: calc((100% - (2 * var(--gap-lg))) / 3);
 }
 
@@ -456,6 +465,7 @@ main {}
 .faq span {
     padding: 10px 0;
 }
+
 /* freccettina estetica correlata alla faq */
 .faq span::after {
     content: "^";
@@ -475,6 +485,7 @@ main {}
     transform: rotate(0deg);
     scale: 120%;
 }
+
 /* risposte. inizialmente nascoste usando opacity(puramente visivo) e azzerando la fontsize */
 /* display none block non mi permette di avere transition. Con solo l'opacity mi rimane il suo ingombro*/
 /* fontsize 0 mi permette di rendere invisibile il p */
@@ -484,8 +495,9 @@ main {}
     font-size: 0rem;
     transition: opacity .25s ease-out, font-size .1s linear;
 }
+
 /* all hover sullo span, ho effetti sul primo p sibling successivo */
-.faq span:hover ~ p{
+.faq span:hover~p {
     font-size: .8rem;
     opacity: 1;
 }
@@ -500,6 +512,10 @@ footer ul h2 {
     margin-bottom: 10px;
 }
 
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
 /* puramente decorativo divisore colorato */
 .bottom-footer div {
     display: inline-block;
@@ -507,4 +523,30 @@ footer ul h2 {
     padding-top: 40px;
     padding-right: 30px;
     border-top: 1px solid var(--color-light-grey);
+}
+
+/* bonus personale */
+#go-up {
+    color: var(--color-light-grey);
+    border-radius: 50%;
+    font-size: 3rem;
+    opacity: .5;
+    box-shadow: 3px 3px 2px var(--color-grey);
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+
+}
+
+#go-up:hover {
+    box-shadow: 10px 10px 5px var(--color-grey);
+    text-shadow: 0 0px 20px var(--color-bg-light-blue),
+        0 0px 40px var(--color-bg-dull-blue),
+        0 0px 60px var(--color-bg-light-blue),
+        0 0px 80px var(--color-bg-light-blue);
+    opacity: .85;
+    transform: translate(-5px, -5px);
+    scale: 110%;
 }
