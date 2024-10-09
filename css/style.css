@@ -46,6 +46,7 @@ img {
     --gap-xl: 45px;
     --p-block-lg: 50px;
     --p-6-12: 6px 12px;
+    --p-30-20: 30px 20px;
     /* text dims */
     --text-xl: 4rem;
     --text-lg: 2rem;
@@ -104,6 +105,9 @@ img {
 .p-6-12 {
     padding: var(--p-6-12);
 }
+.p-10-20 {
+    padding: var(--p-30-20);
+}
 
 /* bg-colors */
 .bg-white {
@@ -116,6 +120,9 @@ img {
 /* text-colors */
 .text-grey {
     color: var(--color-grey);
+}
+.text-bright-blue {
+    color: var(--color-bg-bright-blue);
 }
 
 /* text dimensions */
@@ -137,14 +144,14 @@ img {
 /* containers */
 .outer-container {
     border: 1px solid green;
-    max-width: 1000px;
+    max-width: 1150px;
     margin-inline: auto;
     padding-inline: 20px;
 }
 
 .inner-container {
     border: 1px solid blue;
-    max-width: 800px;
+    max-width: 950px;
     margin-inline: auto;
     padding-inline: 20px;
 }
@@ -237,10 +244,16 @@ main {
     box-shadow: inset 0 0 0 1px var(--color-grey)
 }
 
-.business-options > div {
+/* singola business option */
+.business-options > div  {
     flex: 1 0 0;
-    border: 1px solid var(--color-grey);
-    padding: var(--p-6-12);
+    border: 1px solid var(--color-light-grey);
+
+}
+/* la singola business option è composta da due macro div */
+/* per avere il bordo di separazione, metto un border bottom al primo macro div */
+.business-options > div > div:first-child {
+    border-bottom: 1px solid var(--color-light-grey);
 }
 /* ad acquista ora che è lultima ancora della singola option gli rimetto piu o meno le impostazioni di default */
 .business-options > div a:last-child {
@@ -248,13 +261,14 @@ main {
     color: var(--color-bg-bright-blue);
 }
 
+
 .business-options .line-spacing {
     border: 1px solid var(--color-light-grey);
     width: 30%;
 }
 
 .business-options > div > * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 
