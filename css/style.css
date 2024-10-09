@@ -30,8 +30,9 @@ a {
     --color-bg-light-red: #ff1c1c;
     --color-bg-red: #d5001f;
     --color-bg-yellow: #ffd830;
-    /* gaps */
+    /* spacers */
     --gap-md: 20px;
+    --p-block-lg: 50px;
 
 }
 
@@ -51,7 +52,9 @@ a {
     gap: var(--gap-md);
 }
 /* spacers */ 
-
+.p-block-lg {
+    padding-block: var(--p-block-lg);
+}
 /* containers */
 .outer-container {
     border: 1px solid green;
@@ -88,4 +91,12 @@ main {
 /* footer */
 footer {
     background-color: #505050;
+    padding-block: 60px 30px;
+}
+
+.bottom-footer div {
+    display: inline-block;
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px solid blue;
 }
