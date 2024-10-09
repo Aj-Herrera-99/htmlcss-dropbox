@@ -238,6 +238,7 @@ main {
     border-radius: 50%;
     width: 1rem;
     height: 1rem;
+    cursor: pointer;
 }
 /* la seconda checkbox la disegno come non checkata */
 .business-plan .invoice>span:nth-child(2):before {
