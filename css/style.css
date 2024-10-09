@@ -43,7 +43,7 @@ img {
     --gap-xs: 5px;
     --gap-md: 15px;
     --gap-lg: 30px;
-    --gap-xl: 45px;
+    --gap-xl: 50px;
     --p-block-lg: 50px;
     --p-6-12: 6px 12px;
     --p-30-20: 30px 20px;
@@ -224,7 +224,7 @@ main {
     width: 70%;
 }
 
-/* section 1 */
+/* section 1 business-plan */ /*section 2 enterprise*/
 #business-plan {
     padding-top: 100px;
 }
@@ -246,14 +246,16 @@ main {
 }
 
 /* singola business option */
-.business-options > div  {
+.business-options > div, 
+.enterprise > div  {
     flex: 1 0 0;
     border: 1px solid var(--color-light-grey);
 
 }
 /* la singola business option è composta da due macro div */
 /* per avere il bordo di separazione, metto un border bottom al primo macro div */
-.business-options > div > div:first-child {
+.business-options > div > div:first-child, 
+.enterprise > div > div:first-child {
     border-bottom: 1px solid var(--color-light-grey);
 }
 /* ad acquista ora che è lultima ancora della singola option gli rimetto piu o meno le impostazioni di default */
@@ -262,14 +264,17 @@ main {
     color: var(--color-bg-bright-blue);
 }
 
-
 .business-options .line-spacing {
     border: 1px solid var(--color-light-grey);
     width: 30%;
 }
 
-.business-options > div > * {
-    /* border: 1px solid red; */
+#enterprise {
+    margin-top: 50px;
+}
+
+.enterprise a {
+    width: calc((100% - ((2 * var(--gap-xl)) + 20px))  / 3);
 }
 
 
