@@ -31,6 +31,23 @@ a {
     --color-bg-yellow: #ffd830;
 }
 
+/* debug */
+.debug {
+    border: 1px solid red;
+}
+
+/* containers */
+.outer-container {
+    border: 1px solid green;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.inner-container {
+    border: 1px solid blue;
+    max-width: 800px;
+    margin-inline: auto;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -39,3 +56,14 @@ body {
 }
 
 /* header */
+header {
+    background-color: #d1d1d1;
+}
+/* main */ 
+main {
+    background-color: #8e8e8e;
+}
+/* footer */
+footer {
+    background-color: #505050;
+}
