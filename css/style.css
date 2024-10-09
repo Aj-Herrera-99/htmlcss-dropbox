@@ -78,7 +78,7 @@ html {
     flex-direction: column;
 }
 
-.flex-row-reverse{
+.flex-row-reverse {
     flex-direction: row-reverse;
 }
 
@@ -95,9 +95,10 @@ html {
     align-items: flex-start;
 }
 
-.content-center{ 
+.content-center {
     justify-content: center;
 }
+
 .content-between {
     justify-content: space-between;
 }
@@ -106,6 +107,7 @@ html {
 .gap-xs {
     gap: var(--gap-xs);
 }
+
 .gap-md {
     gap: var(--gap-md);
 }
@@ -113,6 +115,7 @@ html {
 .gap-lg {
     gap: var(--gap-lg);
 }
+
 .gap-xl {
     gap: var(--gap-xl);
 }
@@ -120,12 +123,15 @@ html {
 .p-block-lg {
     padding-block: var(--p-block-lg);
 }
+
 .p-6-12 {
     padding: var(--p-6-12);
 }
+
 .p-10-20 {
     padding: var(--p-30-20);
 }
+
 .p-30 {
     padding: var(--p-30);
 }
@@ -138,44 +144,57 @@ html {
 .bg-light-blue {
     background-color: var(--color-bg-light-blue);
 }
+
 .bg-thin-grey {
     background-color: var(--color-thin-grey);
 }
+
 .bg-light-green {
     background-color: var(--color-bg-light-green);
 }
+
 .bg-dark-red {
     background-color: var(--color-bg-dark-red);
 }
+
 .bg-dull-blue {
     background-color: var(--color-bg-dull-blue);
 }
+
 .bg-light-red {
     background-color: var(--color-bg-light-red);
 }
+
 .bg-red {
     background-color: var(--color-bg-red);
 }
+
 .bg-bright-blue {
     background-color: var(--color-bg-bright-blue);
 }
+
 .bg-yellow {
     background-color: var(--color-bg-yellow);
 }
+
 /* borders */
 .border-thin-green {
     border: 10px solid var(--color-bg-thin-green);
 }
+
 .no-border {
     border: none !important;
 }
+
 /* text-colors */
 .text-grey {
     color: var(--color-grey);
 }
+
 .text-bright-blue {
     color: var(--color-bg-bright-blue);
 }
+
 .text-dark-red {
     color: var(--color-text-dark-red);
 }
@@ -192,6 +211,7 @@ html {
 .text-bold {
     font-weight: 700;
 }
+
 .text-ultra-bold {
     font-weight: 900;
 }
@@ -272,8 +292,7 @@ header nav li:not(#logo) a:hover:after {
 }
 
 /* main */
-main {
-}
+main {}
 
 /* jumbo */
 #jumbo-section {
@@ -299,7 +318,8 @@ main {
     width: 70%;
 }
 
-/* section 1 business-plan */ /*section 2 enterprise*/
+/* section 1 business-plan */
+/*section 2 enterprise*/
 #business-plan {
     padding-top: 100px;
 }
@@ -315,22 +335,24 @@ main {
     height: 1rem;
     cursor: pointer;
 }
+
 /* la seconda checkbox la disegno come non checkata */
 .business-plan .invoice>span:nth-child(2):before {
     box-shadow: inset 0 0 0 1px var(--color-grey)
 }
 
 /* singola business option */
-.business-options > div, 
-.enterprise > div  {
+.business-options>div,
+.enterprise>div {
     flex: 1 0 0;
     border: 1px solid var(--color-light-grey);
 
 }
+
 /* la singola business option è composta da due macro div */
 /* per avere il bordo di separazione, metto un border bottom al primo macro div */
-.business-options > div > div:first-child, 
-.enterprise > div > div:first-child {
+.business-options>div>div:first-child,
+.enterprise>div>div:first-child {
     border-bottom: 1px solid var(--color-light-grey);
 }
 
@@ -339,7 +361,7 @@ main {
 }
 
 .enterprise a {
-    width: calc((100% - ((2 * var(--gap-xl)) + 20px))  / 3);
+    width: calc((100% - ((2 * var(--gap-xl)) + 20px)) / 3);
 }
 
 /* find partner */
@@ -361,7 +383,7 @@ main {
 }
 
 /* figli di card container */
-.card-container > div {
+.card-container>div {
     max-width: calc((100% - (2 * var(--gap-lg))) / 3);
 }
 
@@ -370,8 +392,8 @@ main {
     padding-block: 100px;
 }
 
-.partners-logos .left > div,
-.partners-logos .right > div {
+.partners-logos .left>div,
+.partners-logos .right>div {
     width: 50%;
     aspect-ratio: 1/1;
     display: flex;
@@ -383,7 +405,8 @@ main {
 .right img {
     width: 50%;
 }
-.partners-logos > div {
+
+.partners-logos>div {
     min-width: 250px;
     width: calc(100% / 3);
     aspect-ratio: 1/1;
@@ -398,8 +421,60 @@ main {
     padding-block: 100px;
 }
 
-.cta > * {
-    width: calc(100%  / 2);
+.cta>* {
+    width: calc(100% / 2);
+}
+
+/* faq */
+#faq {
+    padding-block: 100px;
+}
+
+.faq div {
+    padding-block: 30px;
+    border-bottom: 1px solid var(--color-light-grey);
+}
+
+.faq div:nth-child(2) {
+    margin-top: 30px;
+    border-top: 1px solid var(--color-light-grey);
+}
+
+.faq span {
+    padding: 10px 0;
+}
+/* freccettina estetica correlata alla faq */
+.faq span::after {
+    content: "^";
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    margin-right: 20px;
+    font-weight: bold;
+    transform: rotate(180deg);
+    transition: all .25s linear;
+}
+
+/* all hover sullo span, ho effetti sul suo after */
+.faq span:hover::after {
+    transform: rotate(0deg);
+    scale: 120%;
+}
+/* risposte. inizialmente nascoste usando opacity(puramente visivo) e azzerando la fontsize */
+/* display none block non mi permette di avere transition. Con solo l'opacity mi rimane il suo ingombro*/
+/* fontsize 0 mi permette di rendere invisibile il p */
+.faq div p {
+    opacity: 0;
+    margin: 0px 50px 0 5px;
+    font-size: 0rem;
+    transition: opacity .25s ease-out, font-size .1s linear;
+}
+/* all hover sullo span, ho effetti sul primo p sibling successivo */
+.faq span:hover ~ p{
+    font-size: .8rem;
+    opacity: 1;
 }
 
 /* footer */
