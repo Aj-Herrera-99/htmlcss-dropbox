@@ -37,9 +37,13 @@ img {
     --color-bg-light-red: #ff1c1c;
     --color-bg-red: #d5001f;
     --color-bg-yellow: #ffd830;
+    --color-light-grey: #bbbbbb;
+    --color-grey: #6b6b6b;
     /* spacers */
     --gap-xs: 5px;
+    --gap-md: 15px;
     --gap-lg: 30px;
+    --gap-xl: 45px;
     --p-block-lg: 50px;
     --p-6-12: 6px 12px;
     /* text dims */
@@ -62,6 +66,11 @@ img {
     flex-direction: column;
 }
 
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
 .items-center {
     align-items: center;
 }
@@ -78,13 +87,22 @@ img {
 .gap-xs {
     gap: var(--gap-xs);
 }
+.gap-md {
+    gap: var(--gap-md);
+}
 
 .gap-lg {
     gap: var(--gap-lg);
 }
+.gap-xl {
+    gap: var(--gap-xl);
+}
 
 .p-block-lg {
     padding-block: var(--p-block-lg);
+}
+.p-6-12 {
+    padding: var(--p-6-12);
 }
 
 /* bg-colors */
@@ -94,6 +112,10 @@ img {
 
 .bg-light-blue {
     background-color: var(--color-bg-light-blue);
+}
+/* text-colors */
+.text-grey {
+    color: var(--color-grey);
 }
 
 /* text dimensions */
@@ -105,11 +127,13 @@ img {
     font-size: var(--text-lg);
 }
 
+.text-bold {
+    font-weight: 700;
+}
 .text-ultra-bold {
     font-weight: 900;
 }
 
-/* text-colors */
 /* containers */
 .outer-container {
     border: 1px solid green;
@@ -208,9 +232,29 @@ main {
     width: 1rem;
     height: 1rem;
 }
-
+/* la seconda checkbox la disegno come non checkata */
 .business-plan .invoice>span:nth-child(2):before {
-    box-shadow: inset 0 0 0 1px #bbbbbb;
+    box-shadow: inset 0 0 0 1px var(--color-grey)
+}
+
+.business-options > div {
+    flex: 1 0 0;
+    border: 1px solid var(--color-grey);
+    padding: var(--p-6-12);
+}
+/* ad acquista ora che è lultima ancora della singola option gli rimetto piu o meno le impostazioni di default */
+.business-options > div a:last-child {
+    text-decoration: underline;
+    color: var(--color-bg-bright-blue);
+}
+
+.business-options .line-spacing {
+    border: 1px solid var(--color-light-grey);
+    width: 30%;
+}
+
+.business-options > div > * {
+    border: 1px solid red;
 }
 
 
