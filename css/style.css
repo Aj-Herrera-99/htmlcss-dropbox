@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -15,18 +15,27 @@ a {
 }
 
 :root {
-	--color-text-white: #ffffff;
-	--color-text-black: #000000;
-	--color-text-dark-red: #61082b;
-	--color-bg-white: #ffffff;
-	--color-bg-black: #000000;
-	--color-bg-bright-blue: #0061ff;
-	--color-bg-light-blue: #b4d0e7;
-	--color-bg-dull-blue: #0093ce;
-	--color-bg-light-green: #a2d39b;
-	--color-bg-thin-green: #d1e9cd;
-	--color-bg-dark-red: #61082b;
-	--color-bg-light-red: #ff1c1c;
-	--color-bg-red: #d5001f;
-	--color-bg-yellow: #ffd830;
+    --color-text-white: #ffffff;
+    --color-text-black: #000000;
+    --color-text-dark-red: #61082b;
+    --color-bg-white: #ffffff;
+    --color-bg-black: #000000;
+    --color-bg-bright-blue: #0061ff;
+    --color-bg-light-blue: #b4d0e7;
+    --color-bg-dull-blue: #0093ce;
+    --color-bg-light-green: #a2d39b;
+    --color-bg-thin-green: #d1e9cd;
+    --color-bg-dark-red: #61082b;
+    --color-bg-light-red: #ff1c1c;
+    --color-bg-red: #d5001f;
+    --color-bg-yellow: #ffd830;
 }
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* header */
