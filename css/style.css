@@ -38,9 +38,12 @@ img {
     --color-bg-red: #d5001f;
     --color-bg-yellow: #ffd830;
     /* spacers */
-    --gap-md: 20px;
+    --gap-xs: 5px;
+    --gap-lg: 25px;
     --p-block-lg: 50px;
-
+    --p-6-12: 6px 12px;
+    /* text dims */
+    --text-xl: 4.2rem;
 }
 
 /* debug */
@@ -54,15 +57,31 @@ img {
     flex-wrap: wrap;
 }
 
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
 .content-between {
     justify-content: space-between;
 }
 
-.gap-md {
-    gap: var(--gap-md);
+/* spacers */
+.gap-xs {
+    gap: var(--gap-xs);
 }
 
-/* spacers */
+.gap-lg {
+    gap: var(--gap-lg);
+}
+
 .p-block-lg {
     padding-block: var(--p-block-lg);
 }
@@ -72,24 +91,40 @@ img {
     background-color: var(--color-bg-white);
 }
 
+.bg-light-blue {
+    background-color: var(--color-bg-light-blue);
+}
+
+/* text dimensions */
+.text-xl {
+    font-size: var(--text-xl);
+}
+
+.text-ultra-bold {
+    font-weight: 900;
+}
+
 /* text-colors */
 /* containers */
 .outer-container {
     border: 1px solid green;
-    max-width: 1200px;
+    max-width: 1000px;
     margin-inline: auto;
+    padding-inline: 20px;
 }
 
 .inner-container {
     border: 1px solid blue;
     max-width: 800px;
     margin-inline: auto;
+    padding-inline: 20px;
 }
 
 /* components */
 .btn {
     background-color: var(--color-bg-bright-blue);
     color: var(--color-text-white);
+    padding: var(--p-6-12);
 }
 
 body {
@@ -97,6 +132,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-size: 14px;
     color: var(--color-text-black);
 }
 
@@ -112,25 +148,46 @@ header {
 
 header nav li a {
     display: block;
-    padding: 6px 16px;
-    /* position: relative; */
+    padding: var(--p-6-12);
 }
 
 header nav li:not(#logo) a:hover:after {
     content: "";
     display: block;
-    outline: 2px solid #b4d0e7;
+    outline: 2px solid var(--color-bg-light-blue);
     width: 100%;
     position: relative;
     top: calc(20px + 6px + 1px);
 }
 
-
-
 /* main */
 main {
     background-color: #8e8e8e;
 }
+/* jumbo */
+#jumbo-section {
+    padding-block: 160px 0;
+}
+
+.jumbo-caption {
+    position: relative;
+    top: 50px;
+}
+
+.jumbo-caption .arrow-d {
+    font-size: 3rem;
+    margin-top: 25px;
+}
+
+.jumbo-left {
+    width: 30%;
+}
+
+.jumbo-right {
+    width: 70%;
+}
+
+
 
 /* footer */
 footer {
