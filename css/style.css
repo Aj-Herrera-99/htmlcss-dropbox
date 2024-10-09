@@ -304,6 +304,16 @@ main {
     width: calc(40% - 15px);
 }
 
+/* operations */
+#operations {
+    padding-block: 100px;
+}
+
+/* figli di card container */
+.card-container > div {
+    max-width: calc((100% - (2 * var(--gap-lg))) / 3);
+}
+
 
 /* footer */
 footer {
