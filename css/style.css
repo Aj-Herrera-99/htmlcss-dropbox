@@ -14,6 +14,13 @@ a {
     color: inherit;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 :root {
     /* colors variable */
     --color-text-white: #ffffff;
@@ -40,31 +47,49 @@ a {
 .debug {
     border: 1px solid red;
 }
+
 /* flex utilities */
 .d-flex {
     display: flex;
     flex-wrap: wrap;
 }
+
 .content-between {
     justify-content: space-between;
 }
+
 .gap-md {
     gap: var(--gap-md);
 }
-/* spacers */ 
+
+/* spacers */
 .p-block-lg {
     padding-block: var(--p-block-lg);
 }
+
+/* bg-colors */
+.bg-white {
+    background-color: var(--color-bg-white);
+}
+
+/* text-colors */
 /* containers */
 .outer-container {
     border: 1px solid green;
     max-width: 1200px;
     margin-inline: auto;
 }
+
 .inner-container {
     border: 1px solid blue;
     max-width: 800px;
     margin-inline: auto;
+}
+
+/* components */
+.btn {
+    background-color: var(--color-bg-bright-blue);
+    color: var(--color-text-white);
 }
 
 body {
@@ -72,22 +97,41 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    color: var(--color-text-black);
 }
 
 /* header */
 header {
-    background-color: #d1d1d1;
-    padding: 15px;
+    padding: 20px 15px;
+    box-shadow: 0 2px 10px rgb(85, 85, 85);
+    margin-bottom: 40px;
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
 }
 
-header nav li {
-    border: 1px solid red;
-    padding: 5px 10px;
+header nav li a {
+    display: block;
+    padding: 6px 16px;
+    /* position: relative; */
 }
-/* main */ 
+
+header nav li:not(#logo) a:hover:after {
+    content: "";
+    display: block;
+    outline: 2px solid #b4d0e7;
+    width: 100%;
+    position: relative;
+    top: calc(20px + 6px + 1px);
+}
+
+
+
+/* main */
 main {
     background-color: #8e8e8e;
 }
+
 /* footer */
 footer {
     background-color: #505050;
