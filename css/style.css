@@ -21,6 +21,10 @@ img {
     display: block;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     /* colors variable */
     --color-text-white: #ffffff;
