@@ -37,6 +37,7 @@ img {
     --color-bg-light-red: #ff1c1c;
     --color-bg-red: #d5001f;
     --color-bg-yellow: #ffd830;
+    --color-thin-grey: #eaeaea;
     --color-light-grey: #bbbbbb;
     --color-grey: #6b6b6b;
     /* spacers */
@@ -48,6 +49,7 @@ img {
     --p-block-lg: 50px;
     --p-6-12: 6px 12px;
     --p-30-20: 30px 20px;
+    --p-30: 30px;
     /* text dims */
     --text-xl: 4rem;
     --text-lg: 2rem;
@@ -116,6 +118,9 @@ img {
 .p-10-20 {
     padding: var(--p-30-20);
 }
+.p-30 {
+    padding: var(--p-30);
+}
 
 /* bg-colors */
 .bg-white {
@@ -124,6 +129,9 @@ img {
 
 .bg-light-blue {
     background-color: var(--color-bg-light-blue);
+}
+.bg-thin-grey {
+    background-color: var(--color-thin-grey);
 }
 /* text-colors */
 .text-grey {
@@ -180,6 +188,15 @@ img {
 .toggle-reset {
     text-decoration: underline;
     color: var(--color-bg-bright-blue);
+}
+
+.line-spacing {
+    border: 1px solid var(--color-light-grey);
+    width: 30%;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
 }
 
 body {
@@ -278,11 +295,6 @@ main {
     border-bottom: 1px solid var(--color-light-grey);
 }
 
-.business-options .line-spacing {
-    border: 1px solid var(--color-light-grey);
-    width: 30%;
-}
-
 #enterprise {
     margin-top: 50px;
 }
@@ -315,8 +327,18 @@ main {
 }
 
 /* partners */
-#partners > div:first-child {
+.partners-text {
     padding-block: 100px;
+}
+.partners-logos > div {
+    border: 1px solid red;
+    min-width: 300px;
+    width: calc(100% / 3);
+    aspect-ratio: 1/1;
+}
+
+.partners-logos .center .image {
+    width: 50%;
 }
 
 
