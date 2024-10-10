@@ -260,7 +260,6 @@ header nav ul:last-child li:not(.btn-container):hover {
 }
 
 .partners-logos>div {
-    min-width: 250px;
     width: calc(100% / 3);
     aspect-ratio: 1/1;
 }
