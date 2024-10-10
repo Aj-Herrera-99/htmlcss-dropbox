@@ -282,6 +282,8 @@ header nav>ul:last-child>li:not(.btn-container):hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: visible;
+    transition: all .3s ease-in, visibility 0s ;
 }
 
 /* il logo dei partner è piu piccolo rispetto al proprio contenitore */
@@ -298,6 +300,20 @@ header nav>ul:last-child>li:not(.btn-container):hover {
 
 .partners-logos .center .image {
     width: 50%;
+}
+
+.partners-logos > div:not(.center) > div:hover {
+    width: 100%;
+}
+
+.partners-logos > div:not(.center):hover div:not(:hover) {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    /* display: none; */
 }
 
 /* call-to-action */
@@ -395,14 +411,13 @@ footer ul li a:hover {
 /* il menu a tendina parte sotto la voce in hover, inizialmente nascosta */
 header .menu-dropdown {
     visibility: hidden;
+    color: rgba(255, 255, 255, 0.25);
     position: absolute;
     top: 80px;
     padding-top: 10px;
     left: 20px;
-    width: max-content;
-    height: 0;
-    font-size: 0;
-    transition: visibility 0s, height .25s linear, font-size .3s ease-in;
+    min-width: 1000px;
+    transition: visibility 0s, color .3s linear;
 }
 
 /* sfondo del menu a tendina */
@@ -411,55 +426,29 @@ header .menu-dropdown::before {
     display: block;
     position: absolute;
     top: 2px;
-    bottom: -10px;
+    bottom: 15vh; /*altezza iniziale piu corta */
     left: -9999px;
     right: -9999px;
     z-index: -1;
-    background-color: rgba(255, 255, 255, 0.22);
+    background-color: rgba(255, 255, 255, 0.25);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15px);
     border: 1px solid var(--color-light-greygrey);
+    transition: bottom .2s ease-in-out;
 }
 /* effetti sul menu a tendina quando passo sopra una voce dell header */
 header nav li:has(.menu-dropdown):hover .menu-dropdown {
     visibility: visible;
-    font-size: 1rem;
-}
-/* usati solo a scopo visivo, per avere animazione di una tendina che scende */
-/* volevo usare height: fit-content in tal modo da adattare lo sfondo all'altezza massima delle ul della tendina */
-/* ma non mi fa avere nessuna transizione */
-header nav li:has(.why-db):hover .menu-dropdown {
-    height: 65vh;
-}
-header nav li:has(.funzioni):hover .menu-dropdown {
-    height: 28vh;
-}
-header nav li:has(.supporto):hover .menu-dropdown {
-    height: 13vh;
-}
-/* tendina perche-dropbox */
-header .why-db {
-    max-width: 500px;
+    color: inherit;
 }
 
-header .why-db li {
-    padding: var(--p-6-12);
-    max-width: 200px;
-}
-/* tendina funzioni */
-header .funzioni {
-    max-width: 1000px;
+header nav li:has(.menu-dropdown):hover .menu-dropdown::before{
+     /* altezza che prende tutto il contenuto lasciando 10px di margine*/
+     bottom: -10px;
 }
 
-header .funzioni li {
-    max-width: 200px;
-}
-
-header .funzioni li > * {
-    padding: var(--p-6-12);
-}
-/* tendina supporto */
-header .supporto li {
+header .menu-dropdown li,
+header .menu-dropdown li > * {
     padding: var(--p-6-12);
 }
 /* effetti sulle singolevoci di ogni tendina */
@@ -468,5 +457,5 @@ header .funzioni li>span:hover,
 header .supporto li:hover {
     cursor: pointer;
     border-radius: 20px;
-    background-color: rgba(135, 135, 135, 0.15);
+    background-color: rgba(135, 135, 135, 0.35);
 }

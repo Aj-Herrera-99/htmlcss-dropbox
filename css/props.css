@@ -186,3 +186,8 @@
 .text-ultra-bold {
     font-weight: 900;
 }
+
+/* display */
+.inline-block {
+    display: inline-block;
+}
