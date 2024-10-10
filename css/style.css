@@ -60,6 +60,7 @@ html {
     --text-xl: 4rem;
     --text-lg: 1.8rem;
 }
+
 /* debug */
 /* .debug {
     border: 1px solid red;
@@ -110,11 +111,12 @@ html {
 .overflow-y-auto {
     overflow-y: auto;
 }
+
 /* creato elemento a se stante di arrow dropdown */
 .arrow-dropdown {
     display: block;
-    border-left: 3px solid var(--color-text-black);
-    border-bottom: 3px solid var(--color-text-black);
+    border-left: 2.3px solid var(--color-text-black);
+    border-bottom: 2.3px solid var(--color-text-black);
     width: .5rem;
     height: .5rem;
     margin-right: 30px;
@@ -125,7 +127,10 @@ html {
 /* all hover sul diretto padre che ha un figlio di classe arrow-dropdown, ho effetti sul dropdown */
 *:has(> .arrow-dropdown):hover .arrow-dropdown {
     transform: rotate(135deg);
+    position: relative;
+    bottom: -0.25rem;
 }
+
 /* body */
 body {
     font-family: "Open Sans", sans-serif;
@@ -144,14 +149,19 @@ header {
     z-index: 1000;
 }
 
+header nav>ul>li {
+    position: relative;
+}
+
 header nav li a {
     /* border: 1px solid red; */
     display: block;
     padding: var(--p-30-20);
 }
+
 /* all hover degli elementi della header TRANNE il logo e bottone, compare una barra orizzontale sotto */
-header nav ul:first-child li:not(#logo):hover,
-header nav ul:last-child li:not(.btn-container):hover {
+header nav > ul:first-child > li:not(#logo):hover,
+header nav > ul:last-child > li:not(.btn-container):hover {
     border-bottom: 2px solid var(--color-bg-bright-blue);
     box-shadow: 0 4px 2px -2px var(--color-bg-light-blue);
 }
@@ -168,20 +178,24 @@ header nav ul:last-child li:not(.btn-container):hover {
     position: relative;
     top: 60px;
 }
+
 /* icona freccia della jumbo */
 .jumbo-caption .arrow-d {
     font-size: 2.8rem;
     margin-top: 60px;
 }
+
 .jumbo-caption .arrow-d:hover {
     color: var(--color-bg-bright-blue);
     scale: 110%;
 }
+
 /* paragrafo della jumbo */
 .jumbo-left {
     min-width: 200px;
     width: 30%;
 }
+
 /* immagine della jumbo */
 .jumbo-right {
     min-width: 300px;
@@ -299,7 +313,7 @@ header nav ul:last-child li:not(.btn-container):hover {
     border-top: 1px solid var(--color-light-grey);
 }
 
-.faq > div > span {
+.faq>div>span {
     padding: 10px 0;
 }
 
@@ -315,7 +329,7 @@ header nav ul:last-child li:not(.btn-container):hover {
 }
 
 /* all hover sullo span, ho effetti sul primo p sibling successivo */
-.faq span:hover ~ p {
+.faq span:hover~p {
     font-size: .8rem;
     opacity: 1;
 }
@@ -334,7 +348,8 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-/* puramente decorativo divisore colorato */ /* NB: forse e preferibile usare un after invece di sporcare il div*/
+/* puramente decorativo divisore colorato */
+/* NB: forse e preferibile usare un after invece di sporcare il div*/
 .bottom-footer div {
     display: inline-block;
     margin-top: 80px;
@@ -357,6 +372,7 @@ footer ul li a:hover {
     transition: all .2s ease-in;
 
 }
+
 /* magheggi  */
 #go-up:hover {
     box-shadow: 10px 10px 5px var(--color-grey);
@@ -367,4 +383,65 @@ footer ul li a:hover {
     opacity: .85;
     transform: translate(-5px, -5px);
     scale: 110%;
+}
+
+/* altri bonus */
+
+/* menu a tendina header */
+
+header nav li:has(.menu-dropdown):hover .menu-dropdown{
+    visibility: visible;
+    font-size: 1rem;
+}
+header nav li:has(.why-ds):hover .menu-dropdown{
+    height: 60vh;
+}
+header nav li:has(.funzioni):hover .menu-dropdown{
+    height: 20vh;
+}
+header nav li:has(.supporto):hover .menu-dropdown{
+    height: 15vh;
+}
+
+header .menu-dropdown {
+    visibility: hidden;
+    position: absolute;
+    top: 80px;
+    margin-top: 20px;
+    left: 20px;
+    width: max-content;
+    height: 0;
+    font-size: 0;
+    transition: visibility 0s, height .25s linear, font-size .3s ease-in;
+}
+
+header .menu-dropdown::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -18px;
+    bottom: -10px;
+    left: -9999px;
+    right: -9999px;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--color-light-greygrey);
+}
+
+header .why-ds {
+    max-width: 500px;
+}
+header .why-ds li {
+    max-width: 200px;
+}
+header .funzioni {
+    max-width: 1000px;
+}
+header .funzioni li {
+    max-width: 200px;
+}
+header .supporto {
+    max-width: 100px;
 }

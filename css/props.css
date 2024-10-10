@@ -31,6 +31,10 @@
     align-items: flex-start;
 }
 
+.items-baseline {
+    align-items: baseline;
+}
+
 .content-center {
     justify-content: center;
 }
