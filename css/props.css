@@ -104,6 +104,9 @@
 .bg-light-blue {
     background-color: var(--color-bg-light-blue);
 }
+.bg-dark-blue {
+    background-color: var(--color-bg-dark-blue);
+}
 
 .bg-thin-grey {
     background-color: var(--color-thin-grey);
