@@ -115,7 +115,6 @@ body {
 
 /* header */
 header {
-    padding: 20px 15px;
     box-shadow: 0 2px 5px 1px rgb(178, 178, 178);
     margin-bottom: 40px;
     position: fixed;
@@ -124,18 +123,14 @@ header {
 }
 
 header nav li a {
+    /* border: 1px solid red; */
     display: block;
-    padding: var(--p-6-12);
+    padding: var(--p-30-20);
 }
-
 /* all hover degli elementi della header TRANNE il logo, compare una barra orizzontale sotto */
-header nav li:not(#logo) a:hover:after {
-    content: "";
-    display: block;
-    outline: 2px solid var(--color-bg-light-blue);
-    width: 100%;
-    position: relative;
-    top: calc(20px + 6px + 1px);
+header nav li:not(#logo):not(.btn-container):hover {
+    border-bottom: 2px solid var(--color-bg-bright-blue);
+    box-shadow: 0 4px 2px -2px var(--color-bg-light-blue);
 }
 
 /* main */
@@ -255,6 +250,7 @@ header nav li:not(#logo) a:hover:after {
 /* il logo dei partner è piu piccolo rispetto al proprio contenitore */
 .partners-logos .left img,
 .partners-logos .right img {
+    filter: invert(1);
     width: 50%;
 }
 
