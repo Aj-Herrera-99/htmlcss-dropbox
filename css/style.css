@@ -155,6 +155,10 @@ header nav ul:last-child li:not(.btn-container):hover {
     font-size: 2.8rem;
     margin-top: 60px;
 }
+.jumbo-caption .arrow-d:hover {
+    color: var(--color-bg-bright-blue);
+    scale: 110%;
+}
 /* paragrafo della jumbo */
 .jumbo-left {
     min-width: 200px;
