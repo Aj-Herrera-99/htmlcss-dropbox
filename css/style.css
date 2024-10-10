@@ -209,7 +209,7 @@ header nav ul:last-child li:not(.btn-container):hover {
 
 /* lunghezza del bottone contatta l'ufficio vendite */
 .enterprise a {
-    width: calc((100% - ((2 * var(--gap-xl)) + 120px)) / 3);
+    min-width: calc((100% - ((2 * var(--gap-xl)) + 120px)) / 3);
 }
 
 /* find partner */
