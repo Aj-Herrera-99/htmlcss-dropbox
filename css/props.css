@@ -1,0 +1,173 @@
+/* properties */
+
+/* flex utilities */
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.content-center {
+    justify-content: center;
+}
+
+.content-between {
+    justify-content: space-between;
+}
+
+/* spacers */
+.gap-xs {
+    gap: var(--gap-xs);
+}
+
+.gap-sm {
+    gap: var(--gap-sm);
+}
+
+.gap-md {
+    gap: var(--gap-md);
+}
+
+.gap-lg {
+    gap: var(--gap-lg);
+}
+
+.gap-xl {
+    gap: var(--gap-xl);
+}
+
+.p-block-lg {
+    padding-block: var(--p-block-lg);
+}
+
+.p-6-12 {
+    padding: var(--p-6-12);
+}
+
+.p-10-20 {
+    padding: var(--p-30-20);
+}
+
+.p-30 {
+    padding: var(--p-30);
+}
+
+/* bg-colors */
+.bg-transparent {
+    background: transparent;
+}
+
+.bg-black {
+    background-color: var(--color-bg-black);
+}
+
+.bg-white {
+    background-color: var(--color-bg-white);
+}
+
+.bg-light-blue {
+    background-color: var(--color-bg-light-blue);
+}
+
+.bg-thin-grey {
+    background-color: var(--color-thin-grey);
+}
+
+.bg-light-green {
+    background-color: var(--color-bg-light-green);
+}
+
+.bg-dark-red {
+    background-color: var(--color-bg-dark-red);
+}
+
+.bg-dull-blue {
+    background-color: var(--color-bg-dull-blue);
+}
+
+.bg-light-red {
+    background-color: var(--color-bg-light-red);
+}
+
+.bg-red {
+    background-color: var(--color-bg-red);
+}
+
+.bg-bright-blue {
+    background-color: var(--color-bg-bright-blue);
+}
+
+.bg-yellow {
+    background-color: var(--color-bg-yellow);
+}
+
+/* borders */
+.border-thin-green {
+    border: 10px solid var(--color-bg-thin-green);
+}
+
+.no-border {
+    border: none !important;
+}
+
+/* text-colors */
+.text-white {
+    color: var(--color-text-white);
+}
+
+.text-grey {
+    color: var(--color-grey);
+}
+
+.text-light-grey {
+    color: var(--color-light-grey);
+}
+
+.text-bright-blue {
+    color: var(--color-bg-bright-blue);
+}
+
+.text-dark-red {
+    color: var(--color-text-dark-red);
+}
+
+/* text utilities */
+.text-xl {
+    font-size: var(--text-xl);
+}
+
+.text-lg {
+    font-size: var(--text-lg);
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-ultra-bold {
+    font-weight: 900;
+}

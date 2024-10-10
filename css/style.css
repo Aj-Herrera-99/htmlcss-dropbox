@@ -58,183 +58,10 @@ html {
     --text-xl: 4rem;
     --text-lg: 1.8rem;
 }
-
 /* debug */
-.debug {
-    /* border: 1px solid red; */
-}
-
-/* flex utilities */
-.d-flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.nowrap {
-    flex-wrap: nowrap;
-}
-
-.flex-col {
-    flex-direction: column;
-}
-
-.flex-row-reverse {
-    flex-direction: row-reverse;
-}
-
-.flex-center {
-    justify-content: center;
-    align-items: center;
-}
-
-.items-center {
-    align-items: center;
-}
-
-.items-start {
-    align-items: flex-start;
-}
-
-.content-center {
-    justify-content: center;
-}
-
-.content-between {
-    justify-content: space-between;
-}
-
-/* spacers */
-.gap-xs {
-    gap: var(--gap-xs);
-}
-
-.gap-sm {
-    gap: var(--gap-sm);
-}
-
-.gap-md {
-    gap: var(--gap-md);
-}
-
-.gap-lg {
-    gap: var(--gap-lg);
-}
-
-.gap-xl {
-    gap: var(--gap-xl);
-}
-
-.p-block-lg {
-    padding-block: var(--p-block-lg);
-}
-
-.p-6-12 {
-    padding: var(--p-6-12);
-}
-
-.p-10-20 {
-    padding: var(--p-30-20);
-}
-
-.p-30 {
-    padding: var(--p-30);
-}
-
-/* bg-colors */
-.bg-transparent {
-    background: transparent;
-}
-
-.bg-black {
-    background-color: var(--color-bg-black);
-}
-
-.bg-white {
-    background-color: var(--color-bg-white);
-}
-
-.bg-light-blue {
-    background-color: var(--color-bg-light-blue);
-}
-
-.bg-thin-grey {
-    background-color: var(--color-thin-grey);
-}
-
-.bg-light-green {
-    background-color: var(--color-bg-light-green);
-}
-
-.bg-dark-red {
-    background-color: var(--color-bg-dark-red);
-}
-
-.bg-dull-blue {
-    background-color: var(--color-bg-dull-blue);
-}
-
-.bg-light-red {
-    background-color: var(--color-bg-light-red);
-}
-
-.bg-red {
-    background-color: var(--color-bg-red);
-}
-
-.bg-bright-blue {
-    background-color: var(--color-bg-bright-blue);
-}
-
-.bg-yellow {
-    background-color: var(--color-bg-yellow);
-}
-
-/* borders */
-.border-thin-green {
-    border: 10px solid var(--color-bg-thin-green);
-}
-
-.no-border {
-    border: none !important;
-}
-
-/* text-colors */
-.text-white {
-    color: var(--color-text-white);
-}
-
-.text-grey {
-    color: var(--color-grey);
-}
-
-.text-light-grey {
-    color: var(--color-light-grey);
-}
-
-.text-bright-blue {
-    color: var(--color-bg-bright-blue);
-}
-
-.text-dark-red {
-    color: var(--color-text-dark-red);
-}
-
-/* text dimensions */
-.text-xl {
-    font-size: var(--text-xl);
-}
-
-.text-lg {
-    font-size: var(--text-lg);
-}
-
-.text-bold {
-    font-weight: 700;
-}
-
-.text-ultra-bold {
-    font-weight: 900;
-}
+/* .debug {
+    border: 1px solid red;
+} */
 
 /* containers */
 .outer-container {
@@ -251,7 +78,7 @@ html {
     padding-inline: 20px;
 }
 
-/* components */
+/* components, behaviours */
 .btn {
     background-color: var(--color-bg-bright-blue);
     color: var(--color-text-white);
@@ -264,7 +91,7 @@ html {
     border: 1px solid var(--color-text-black);
 }
 
-.toggle-reset {
+.toggle-a-reset {
     text-decoration: underline;
     color: var(--color-bg-bright-blue);
 }
@@ -277,7 +104,7 @@ html {
 .overflow-y-auto {
     overflow-y: auto;
 }
-
+/* body */
 body {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
@@ -301,6 +128,7 @@ header nav li a {
     padding: var(--p-6-12);
 }
 
+/* all hover degli elementi della header TRANNE il logo, compare una barra orizzontale sotto */
 header nav li:not(#logo) a:hover:after {
     content: "";
     display: block;
@@ -311,7 +139,6 @@ header nav li:not(#logo) a:hover:after {
 }
 
 /* main */
-main {}
 
 /* jumbo */
 #jumbo-section {
@@ -323,17 +150,17 @@ main {}
     position: relative;
     top: 60px;
 }
-
+/* icona freccia della jumbo */
 .jumbo-caption .arrow-d {
     font-size: 2.8rem;
     margin-top: 60px;
 }
-
+/* paragrafo della jumbo */
 .jumbo-left {
     min-width: 200px;
     width: 30%;
 }
-
+/* immagine della jumbo */
 .jumbo-right {
     min-width: 300px;
     width: 70%;
@@ -362,7 +189,7 @@ main {}
     box-shadow: inset 0 0 0 1px var(--color-grey)
 }
 
-/* singola business option */
+/* singola business option, enterprise */
 .business-options>div,
 .enterprise>div {
     flex: 1 0 0;
@@ -380,8 +207,9 @@ main {}
     margin-top: 50px;
 }
 
+/* lunghezza del bottone contatta l'ufficio vendite */
 .enterprise a {
-    width: calc((100% - ((2 * var(--gap-xl)) + 20px)) / 3);
+    width: calc((100% - ((2 * var(--gap-xl)) + 120px)) / 3);
 }
 
 /* find partner */
@@ -403,8 +231,8 @@ main {}
     padding-block: 100px;
 }
 
-/* figli di card container */
-.card-container>div {
+/* figli di operations card container */
+.operations .card-container>div {
     min-width: 250px;
     max-width: calc((100% - (2 * var(--gap-lg))) / 3);
 }
@@ -414,6 +242,7 @@ main {}
     padding-block: 100px;
 }
 
+/* aspect ratio 1 mi fa ottenere un quadrato perfetto a partire da una dimensione*/
 .partners-logos .left>div,
 .partners-logos .right>div {
     width: 50%;
@@ -423,8 +252,9 @@ main {}
     align-items: center;
 }
 
-.left img,
-.right img {
+/* il logo dei partner è piu piccolo rispetto al proprio contenitore */
+.partners-logos .left img,
+.partners-logos .right img {
     width: 50%;
 }
 
@@ -489,6 +319,7 @@ main {}
 /* risposte. inizialmente nascoste usando opacity(puramente visivo) e azzerando la fontsize */
 /* display none block non mi permette di avere transition. Con solo l'opacity mi rimane il suo ingombro*/
 /* fontsize 0 mi permette di rendere invisibile il p */
+/* f716cabc13765f146eec167bcde38223383b447e = ultimo commit => NB: provo ad usare la proprieta visibility al posto di opacity e fontsize */
 .faq div p {
     opacity: 0;
     margin: 0px 50px 0 5px;
@@ -497,7 +328,7 @@ main {}
 }
 
 /* all hover sullo span, ho effetti sul primo p sibling successivo */
-.faq span:hover~p {
+.faq span:hover ~ p {
     font-size: .8rem;
     opacity: 1;
 }
@@ -516,7 +347,7 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-/* puramente decorativo divisore colorato */
+/* puramente decorativo divisore colorato */ /* NB: forse e preferibile usare un after invece di sporcare il div*/
 .bottom-footer div {
     display: inline-block;
     margin-top: 80px;
@@ -539,7 +370,7 @@ footer ul li a:hover {
     transition: all .2s ease-in;
 
 }
-
+/* magheggi  */
 #go-up:hover {
     box-shadow: 10px 10px 5px var(--color-grey);
     text-shadow: 0 0px 20px var(--color-bg-light-blue),
