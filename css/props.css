@@ -76,6 +76,10 @@
     padding: var(--p-30);
 }
 
+.p-block-100 {
+    padding-block: var(--p-block-100);
+}
+
 /* bg-colors */
 .bg-transparent {
     background: transparent;

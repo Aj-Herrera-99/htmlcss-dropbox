@@ -54,6 +54,7 @@ html {
     --p-6-12: 6px 12px;
     --p-30-20: 30px 20px;
     --p-30: 30px;
+    --p-block-100: 100px;
     /* text dims */
     --text-xl: 4rem;
     --text-lg: 1.8rem;
@@ -217,9 +218,6 @@ header nav ul:last-child li:not(.btn-container):hover {
 }
 
 /* find partner */
-#find-partner {
-    padding-block: 100px;
-}
 
 .find-partner-image {
     min-width: 250px;
@@ -231,9 +229,6 @@ header nav ul:last-child li:not(.btn-container):hover {
 }
 
 /* operations */
-#operations {
-    padding-block: 100px;
-}
 
 /* figli di operations card container */
 .operations .card-container>div {
@@ -242,9 +237,6 @@ header nav ul:last-child li:not(.btn-container):hover {
 }
 
 /* partners */
-.partners-text {
-    padding-block: 100px;
-}
 
 /* aspect ratio 1 mi fa ottenere un quadrato perfetto a partire da una dimensione*/
 .partners-logos .left>div,
@@ -273,18 +265,12 @@ header nav ul:last-child li:not(.btn-container):hover {
 }
 
 /* call-to-action */
-#call-to-action {
-    padding-block: 100px;
-}
 
 .cta>* {
     width: calc(100% / 2);
 }
 
 /* faq */
-#faq {
-    padding-block: 100px;
-}
 
 .faq div {
     padding-block: 30px;
