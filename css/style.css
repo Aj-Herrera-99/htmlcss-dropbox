@@ -110,6 +110,22 @@ html {
 .overflow-y-auto {
     overflow-y: auto;
 }
+/* creato elemento a se stante di arrow dropdown */
+.arrow-dropdown {
+    display: block;
+    border-left: 3px solid var(--color-text-black);
+    border-bottom: 3px solid var(--color-text-black);
+    width: .5rem;
+    height: .5rem;
+    margin-right: 30px;
+    transform: rotate(-45deg);
+    transition: all .15s ease-in;
+}
+
+/* all hover sul diretto padre che ha un figlio di classe arrow-dropdown, ho effetti sul dropdown */
+*:has(> .arrow-dropdown):hover .arrow-dropdown {
+    transform: rotate(135deg);
+}
 /* body */
 body {
     font-family: "Open Sans", sans-serif;
@@ -283,26 +299,8 @@ header nav ul:last-child li:not(.btn-container):hover {
     border-top: 1px solid var(--color-light-grey);
 }
 
-.faq span {
+.faq > div > span {
     padding: 10px 0;
-}
-
-/* freccettina estetica correlata alla faq */
-.faq span::after {
-    content: "";
-    display: block;
-    border-left: 3px solid var(--color-text-black);
-    border-bottom: 3px solid var(--color-text-black);
-    width: .5rem;
-    height: .5rem;
-    margin-right: 20px;
-    transform: rotate(-45deg);
-    transition: all .15s ease-in;
-}
-
-/* all hover sullo span, ho effetti sul suo after */
-.faq span:hover::after {
-    transform: rotate(135deg);
 }
 
 /* risposte. inizialmente nascoste usando opacity(puramente visivo) e azzerando la fontsize */
