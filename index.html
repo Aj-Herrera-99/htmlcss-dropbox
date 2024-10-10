@@ -141,9 +141,17 @@
         <section id="business-plan" class="business-plan inner-container d-flex flex-col gap-lg">
             <h2 class="text-lg">Trova il piano business che fa per te</h2>
             <!-- fatturazione -->
-            <div class="invoice d-flex gap-lg">
-                <span class="d-flex items-center gap-xs">Fatturazione mensile</span>
-                <span class="d-flex items-center gap-xs">Fatturazione annuale</span>
+            <div class="billing d-flex gap-lg">
+                <div>
+                    <input type="radio" id="monthly" value="monthly" name="billing" checked>
+                    <label for="monthly">Fatturazione mensile</label>
+                </div>
+                <div>
+                    <input type="radio" id="annually" value="annually" name="billing">
+                    <label for="annually">Fatturazione annuale</label>
+                </div>
+                <!-- <span class="d-flex items-center gap-xs">Fatturazione mensile</span>
+                <span class="d-flex items-center gap-xs">Fatturazione annuale</span> -->
             </div>
             <div class="business-options d-flex content-between gap-xl">
                 <!-- Professional -->
