@@ -393,10 +393,11 @@ footer ul li a:hover {
 
 /* il menu a tendina parte sotto la voce in hover, inizialmente nascosta */
 header .menu-dropdown {
+    /* border: 1px solid red; */
     visibility: hidden;
     position: absolute;
     top: 80px;
-    margin-top: 20px;
+    padding-top: 7px;
     left: 20px;
     width: max-content;
     height: 0;
@@ -436,7 +437,7 @@ header nav li:has(.funzioni):hover .menu-dropdown {
 header nav li:has(.supporto):hover .menu-dropdown {
     height: 13vh;
 }
-/* tendina perche dropbox */
+/* tendina perche-dropbox */
 header .why-db {
     max-width: 500px;
 }
@@ -445,7 +446,7 @@ header .why-db li {
     padding: var(--p-6-12);
     max-width: 200px;
 }
-
+/* tendina funzioni */
 header .funzioni {
     max-width: 1000px;
 }
@@ -457,11 +458,11 @@ header .funzioni li {
 header .funzioni li > * {
     padding: var(--p-6-12);
 }
-
+/* tendina supporto */
 header .supporto li {
     padding: var(--p-6-12);
 }
-
+/* effetti sulle singolevoci di ogni tendina */
 header .why-db li:hover,
 header .funzioni li>span:hover,
 header .supporto li:hover {
