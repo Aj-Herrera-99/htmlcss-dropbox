@@ -394,11 +394,10 @@ footer ul li a:hover {
 /* menu a tendina header */
 /* il menu a tendina parte sotto la voce in hover, inizialmente nascosta */
 header .menu-dropdown {
-    /* border: 1px solid red; */
     visibility: hidden;
     position: absolute;
     top: 80px;
-    padding-top: 7px;
+    padding-top: 10px;
     left: 20px;
     width: max-content;
     height: 0;
@@ -411,7 +410,7 @@ header .menu-dropdown::before {
     content: "";
     display: block;
     position: absolute;
-    top: -18px;
+    top: 2px;
     bottom: -10px;
     left: -9999px;
     right: -9999px;
@@ -430,7 +429,7 @@ header nav li:has(.menu-dropdown):hover .menu-dropdown {
 /* volevo usare height: fit-content in tal modo da adattare lo sfondo all'altezza massima delle ul della tendina */
 /* ma non mi fa avere nessuna transizione */
 header nav li:has(.why-db):hover .menu-dropdown {
-    height: 60vh;
+    height: 65vh;
 }
 header nav li:has(.funzioni):hover .menu-dropdown {
     height: 28vh;
