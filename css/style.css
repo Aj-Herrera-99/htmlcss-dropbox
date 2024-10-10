@@ -55,6 +55,7 @@ html {
     --p-30-20: 30px 20px;
     --p-30: 30px;
     --p-block-100: 100px;
+    --p-inline-12: 12px;
     /* text dims */
     --text-xl: 4rem;
     --text-lg: 1.8rem;
@@ -288,28 +289,26 @@ header nav ul:last-child li:not(.btn-container):hover {
 
 /* freccettina estetica correlata alla faq */
 .faq span::after {
-    content: "^";
+    content: "";
     display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1rem;
+    border-left: 3px solid var(--color-text-black);
+    border-bottom: 3px solid var(--color-text-black);
+    width: .5rem;
+    height: .5rem;
     margin-right: 20px;
-    font-weight: bold;
-    transform: rotate(180deg);
-    transition: all .25s linear;
+    transform: rotate(-45deg);
+    transition: all .15s ease-in;
 }
 
 /* all hover sullo span, ho effetti sul suo after */
 .faq span:hover::after {
-    transform: rotate(0deg);
-    scale: 120%;
+    transform: rotate(135deg);
 }
 
 /* risposte. inizialmente nascoste usando opacity(puramente visivo) e azzerando la fontsize */
 /* display none block non mi permette di avere transition. Con solo l'opacity mi rimane il suo ingombro*/
 /* fontsize 0 mi permette di rendere invisibile il p */
-/* f716cabc13765f146eec167bcde38223383b447e = ultimo commit => NB: provo ad usare la proprieta visibility al posto di opacity e fontsize */
+/* f716cabc13765f146eec167bcde38223383b447e = ultimo commit =>(non ancora fatto) NB: provo ad usare la proprieta visibility al posto di opacity e fontsize */
 .faq div p {
     opacity: 0;
     margin: 0px 50px 0 5px;

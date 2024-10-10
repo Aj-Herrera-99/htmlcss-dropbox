@@ -80,6 +80,10 @@
     padding-block: var(--p-block-100);
 }
 
+.p-inline-12 {
+    padding-inline: var(--p-inline-12);
+}
+
 /* bg-colors */
 .bg-transparent {
     background: transparent;
