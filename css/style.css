@@ -85,6 +85,10 @@ html {
     padding: var(--p-6-12);
 }
 
+.btn:hover {
+    opacity: .85;
+}
+
 .btn-white {
     background-color: var(--color-bg-white);
     color: var(--color-text-black);
@@ -127,8 +131,9 @@ header nav li a {
     display: block;
     padding: var(--p-30-20);
 }
-/* all hover degli elementi della header TRANNE il logo, compare una barra orizzontale sotto */
-header nav li:not(#logo):not(.btn-container):hover {
+/* all hover degli elementi della header TRANNE il logo e bottone, compare una barra orizzontale sotto */
+header nav ul:first-child li:not(#logo):hover,
+header nav ul:last-child li:not(.btn-container):hover {
     border-bottom: 2px solid var(--color-bg-bright-blue);
     box-shadow: 0 4px 2px -2px var(--color-bg-light-blue);
 }
